@@ -1,0 +1,4 @@
+for i in K4me3-C K4me3-H K4me3-N K9me3-C K9me3-H K9me3-N K27me3-C K27me3-H K27me3-N; do
+echo ${i};
+/bedtools2/bin/coverageBed -F 0.5 -counts -b /Clioquinol/${i}/${i}.bam -a /Clioquinol/${i}/MACS_${i}_peaks.txt > /Clioquinol/MACS_${i}_counts.txt;
+done
